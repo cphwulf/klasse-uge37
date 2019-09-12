@@ -2,12 +2,17 @@ Oversæt flg sætninger til logiske tests der vil kunne bruges i en
 if/else sætning. Antag variablerne x,y og z er blevet deklaret.
 
 a) z er ulige
-b) z er ikke større end kvadratroden af y
-c) y er positiv
-d) Enten er x eller y positiv og den anden er ulige
-e) y er et multiplum af z
-f) z er ikke nul
-g) x er lige
-h) x er tættere på y end z
+b) y er positiv
+c) z er ikke større end kvadratroden af y
+d) Enten er x eller y positiv 
+e) z er ikke nul
+f) x er lige
+g) x er tættere på y end z
+h) y er et multiplum af 3
+h) y er et multiplum af z
+
+
+
+
 
 
