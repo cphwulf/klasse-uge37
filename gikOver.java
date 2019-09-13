@@ -2,57 +2,55 @@ import java.util.Scanner;
 
 public class gikOver {
     public static void main(String[] args) {
-        hvilketLand("Trampeland", "trampe");
-        //hvilketLand("Pegeland", "pege");
-        //hvilketLand("Hinkeland", "hinke");
-        //hvilketLand("Hoppeland", "hoppe");
-        //hvilketLand("Klappeland", "klappe");
-        //hvilketLand("Nikkeland", "nikke");
-        ditEgetLand();
+
+      String Land="Trampeland";
+      String Aktivitet="trampe";
+
+      String startOfSong = indtilDetGivneLand();
+
+      String mySongLine4= versDel1(Land);
+      String mySongLine5= versDel2(Aktivitet);
+      String mySongLine6= versDel3(Land);
+      String mySong = startOfSong + mySongLine4 + mySongLine5 + mySongLine6;
+      System.out.print(mySong);
+
+      Land = ditEgetLand("Land");
+      Aktivitet = ditEgetLand("Aktivitet");
+
+      mySongLine4= versDel1(Land);
+      mySongLine5= versDel2(Aktivitet);
+      mySongLine6= versDel3(Land);
+      mySong = startOfSong + mySongLine4 + mySongLine5 + mySongLine6;
+      System.out.print(mySong);
+    }
+    public static String indtilDetGivneLand() {
+      String myString = "Jeg gik mig over soe og land,\n";
+      myString = myString + "Der moedte jeg en gammel mand.\n";
+      myString = myString + "Han sa'e saa og spurgte saa:\n";
+      myString = myString + "\"Og hvor har du vel hjemme?\"\n";
+      return myString;
     }
     
-    public static void hvilketLand(String ditLand, String iDitLand) {
-        versDel1(ditLand);
-        alleDeSom(iDitLand);
-        versDel2(ditLand);
+    public static String versDel1(String land) {
+      String myString = "\"Jeg har hjemme i " + land + ",\n ";
+      myString = myString + land + ", " + land + ",\n ";
+      return myString;
     }
     
-    public static void ditEgetLand() {
+    public static String versDel2(String landKan) {
+      String myString = "og alle de som " + landKan + " kan,\n";
+      return myString;
+    }
+    
+    public static String versDel3(String land) {
+      String myString = "de har hjemme i " + land + "\".\n";
+      return myString;
+    }
+    public static String ditEgetLand(String typeOfQuestion) {
         Scanner input = new Scanner(System.in);
-        String ditLandValg;
-        String iDitLandValg;
-        
-        System.out.println("Hvad hedder dit land? (f.eks. Trampeland)");
-        ditLandValg = input.nextLine();
-        
-        System.out.println("Hvad laver man i dit land? (f.eks. trampe)");
-        iDitLandValg = input.nextLine();
-        System.out.println();
-        
-        versDel1(ditLandValg);
-        alleDeSom(iDitLandValg);
-        versDel2(ditLandValg);
-    }
-    
-    public static void versDel1(String land) {
-        indtilDetGivneLand();
-        System.out.println("\"Jeg har hjemme i " + land + ", ");
-        System.out.println(land + ", " + land + ", ");
-        
-    }
-    
-    public static void alleDeSom(String landKan) {
-        System.out.println("og alle de som " + landKan + " kan,");
-    }
-    
-    public static void versDel2(String land) {
-        System.out.println("de har hjemme i " + land + "\".\n");
-    }
-    
-    public static void indtilDetGivneLand() {
-        System.out.println("Jeg gik mig over soe og land,");
-        System.out.println("Der moedte jeg en gammel mand.");
-        System.out.println("Han sa'e saa og spurgte saa:");
-        System.out.println("\"Og hvor har du vel hjemme?\"");
+        String ditValg;
+        System.out.println("Hvad hedder dit " + typeOfQuestion);
+        ditValg = input.nextLine();
+        return ditValg;
     }
 }

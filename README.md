@@ -19,3 +19,20 @@ fredag d 13/9 - mere logik, betingelser og metoder
 5) Yatzy
 - YatzyFirst: et slag 
 
+----- Fredag -----
+
+6) protokol
+
+7) Opsamling fra igår
+- formålet med tabel-opgaverne
+- Mia fortæller
+- Daniels sang 
+
+8) Gennemgang af bogens kapitler
+- relationelle operatorer og if-else sætninger
+- logiske operatorer
+- boolean
+- validering af input
+
+
+

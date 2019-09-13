@@ -6,24 +6,24 @@
  *
  */
 
-import java.util.Scanner;
-import java.util.Random;
 
-public class Main {
+import java.util.*;
+public class Chain {
   public static void main(String[] args) {
-    boolean myTruth = guess(12);
-    System.out.println(myTruth);
+    String myResult = guess();
+    System.out.println(myResult);
   }
-  public static boolean guess(int tal) {
-    // send et tal til gættemetoden
+  public static String guess() {
     // lav en random-generator
     // få et randomtal fra din randomgenerator
     // lav en scanner
     // få et gæt fra brugeren vha din scanner
     // hvis randomtal er lig brugerens gæt så
-    // returnér sand
-    // ellers 
-    // returnér falsk
+    // returnér "Du ramte"
+    // hvis randomtal er mindre brugerens gæt så
+    // returnér "Du ramte over"
+    // ellers
+    // returnér "Du ramte under"
 
     // random
     Random myRand = new Random();
@@ -33,9 +33,11 @@ public class Main {
     System.out.println("Gæt på et tal mellem 1 og 9");
     int userGuess = myScan.nextInt();
     if (randNumber == userGuess) {
-      return true;
+      return "Du ramte";
+    } else if (randNumber < userGuess) {
+      return "Du ramte over";
     } else {
-      return false;
+      return "Du ramte under";
     }
   }
 }

@@ -9,12 +9,12 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class Main {
+public class Logic {
   public static void main(String[] args) {
-    boolean myTruth = guess(12);
+    String  myTruth = guess(12);
     System.out.println(myTruth);
   }
-  public static boolean guess(int tal) {
+  public static String guess(int tal) {
     // send et tal til gættemetoden
     // lav en random-generator
     // få et randomtal fra din randomgenerator
@@ -32,10 +32,12 @@ public class Main {
     Scanner myScan = new Scanner(System.in);
     System.out.println("Gæt på et tal mellem 1 og 9");
     int userGuess = myScan.nextInt();
-    if (randNumber == userGuess) {
-      return true;
+    if (!(userGuess < 4 && randNumber < 4)){
+      return "both high";
+    } else if(!(userGuess > 4 && randNumber > 4)){
+      return " both low";
     } else {
-      return false;
+      return " far apart";
     }
   }
 }
